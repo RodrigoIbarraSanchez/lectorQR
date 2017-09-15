@@ -25,20 +25,28 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- ngCordova -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="lectorQR">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
+      <ion-content style="text-align:center" ng-controller="mainCtrl">
+        <div class="item">
+          <img src="img/ionic.png" alt="">
+          <h2>Lector QR</h2>
+          <p>Escanea un código QR</p>
+        </div>
+        <div class="item">
+          <button class="button button-block button-positive" ng-click="leerCodigo()">Escanear</button>
+        </div>
       </ion-content>
     </ion-pane>
   </body>
